@@ -5,7 +5,9 @@ from functools import partial  # to make sure there aren't any unnecessary windo
 import random
 
 class Quiz:
-    def __init__(self, parentX):
+    history: None
+
+    def __init__(self, parent):
         # Formatting Variables
         self.history = None
         background_colour = "#0097a7"
