@@ -40,10 +40,10 @@ class Quiz:
                                      padx=10, pady=10, command=self.history)
         self.history_button.grid(row=1)
 
-        def history(self):
-            print("You want to look at the history")
-            get_history = history(self)
-            get_history.history_text.configure(text="History text goes here")
+    def history(self):
+        print("You want to look at the history")
+        get_history = History(self)
+        get_history.history_text.configure(text="History text goes here")
 
 
 class History:
