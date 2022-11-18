@@ -34,19 +34,21 @@ class Quiz:
                                           padx=10, pady=10)
         self.quiz_label.grid(row=0)
 
-        # history Button (row 1)
+        # History Button (row 1)
         self.history_button = Button(self.quiz_frame, text="History",
-                                  font=("Ubuntu", "14"),
-                                  padx=10, pady=10, command=self.history)
+                                     font=("Ubuntu", "14"),
+                                     padx=10, pady=10, command=self.history)
         self.history_button.grid(row=1)
 
         def history(self):
-                        get_history = history(self)
-                        get_history.history_text.configure(text="History text goes here")
+            print("You want to look at the history")
+            get_history = history(self)
+            get_history.history_text.configure(text="History text goes here")
 
 
-class history:
+class History:
     def __init__(self, partner):
+
         background = "#a9ef99"  # Pale green
 
         # disable history button
@@ -101,5 +103,5 @@ class history:
 if __name__ == "__main__":
     root = Tk()
     root.title("My Quiz")
-    something = Quiz()
+    something = Quiz(root)
     root.mainloop()
